@@ -12,6 +12,5 @@ public interface ProjectConfig extends Config {
 
     String browserVersion();
 
-    @DefaultValue("1920x1080")
     String browserSize();
 }

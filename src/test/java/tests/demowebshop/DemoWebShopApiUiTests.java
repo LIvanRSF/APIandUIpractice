@@ -20,8 +20,17 @@ public class DemoWebShopApiUiTests extends TestBase {
     String login = App.config.userLogin();
     String password = App.config.userPassword();
 
+    @AfterEach
+    void afterAll() {
+        AllureAttachments.addScreenshot();
+        AllureAttachments.addConsoleLog();
+        AllureAttachments.addPageSource();
+
+        Selenide.closeWebDriver();
+    }
+
     @Test
-    @Tag("demowebshop")
+    @Tag("Demowebshop")
     @DisplayName("Success log in test")
     void addToCartAuthorized() {
         step("Get cookie of authorized user and set it into browser", () -> {
@@ -36,7 +45,7 @@ public class DemoWebShopApiUiTests extends TestBase {
     }
 
     @Test
-    @Tag("demowebshop")
+    @Tag("Demowebshop")
     @DisplayName("Edit customer profile")
     void editCustomerProfile() {
         step("Get cookie of authorized user and set it into browser", () ->
