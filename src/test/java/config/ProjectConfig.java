@@ -13,4 +13,6 @@ public interface ProjectConfig extends Config {
     String browserVersion();
 
     String browserSize();
+
+    String remoteDriverUrl();
 }
