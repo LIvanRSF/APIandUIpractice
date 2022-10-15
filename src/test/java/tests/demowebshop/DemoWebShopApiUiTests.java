@@ -30,7 +30,7 @@ public class DemoWebShopApiUiTests extends TestBase {
     }
 
     @Test
-    @Tag("Demowebshop")
+    @Tag("demowebshop")
     @DisplayName("Success log in test")
     void addToCartAuthorized() {
         step("Get cookie of authorized user and set it into browser", () -> {
@@ -45,7 +45,7 @@ public class DemoWebShopApiUiTests extends TestBase {
     }
 
     @Test
-    @Tag("Demowebshop")
+    @Tag("demowebshop")
     @DisplayName("Edit customer profile")
     void editCustomerProfile() {
         step("Get cookie of authorized user and set it into browser", () ->

@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 public class DemoWebShopApiTests extends TestBase{
 
     @Test
-    @Tag("Demowebshop")
+    @Tag("demowebshop")
     @DisplayName("Add product to cart without registration")
     void addToCartAnonim() {
 

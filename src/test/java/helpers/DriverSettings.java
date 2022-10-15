@@ -25,11 +25,9 @@ public class DriverSettings {
         chromeOptions.addArguments("--lang=en-en");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        if (Project.isRemoteWebDriver()) {
-            capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", true);
-            Configuration.remote = Project.config.remoteDriverUrl();
-        }
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.remote = Project.config.remoteDriverUrl();
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         Configuration.browserCapabilities = capabilities;
