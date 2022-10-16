@@ -1,7 +1,5 @@
 package helpers;
 
-import static java.lang.String.format;
-
 import com.codeborne.selenide.Configuration;
 import config.Project;
 import config.demowebshop.App;
@@ -12,9 +10,13 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class DriverSettings {
 
     public static void configure() {
+
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
+
+        RestAssured.baseURI = App.config.apiBaseURI();
+        Configuration.baseUrl = App.config.webBaseURL();
 
         ChromeOptions chromeOptions = new ChromeOptions();
 

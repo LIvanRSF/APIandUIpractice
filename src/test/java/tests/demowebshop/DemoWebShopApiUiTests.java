@@ -6,28 +6,16 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-import com.codeborne.selenide.Selenide;
 import config.demowebshop.App;
-import helpers.AllureAttachments;
 import helpers.demowebshop.GetCookies;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-public class DemoWebShopApiUiTests extends TestBase {
+public class DemoWebShopApiUiTests extends TestBaseWithUi {
 
     String login = App.config.userLogin();
     String password = App.config.userPassword();
-
-    @AfterEach
-    void afterAll() {
-        AllureAttachments.addScreenshot();
-        AllureAttachments.addConsoleLog();
-        AllureAttachments.addPageSource();
-
-        Selenide.closeWebDriver();
-    }
 
     @Test
     @Tag("demowebshop")

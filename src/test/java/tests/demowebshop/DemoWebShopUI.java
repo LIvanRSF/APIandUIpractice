@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
-public class DemoWebShopUI extends TestBase{
+public class DemoWebShopUI extends TestBaseWithUi {
 
     TestData testData = new TestData();
     RegistrationPage regPage = new RegistrationPage();
@@ -18,6 +18,7 @@ public class DemoWebShopUI extends TestBase{
     void registrationNewUserTest() {
         regPage.openPage()
             .setUserGender()
+            .setFirstName(testData.regFirstName)
             .setFirstName(testData.regFirstName)
             .setLastName(testData.regLastName)
             .setUserEmail(testData.regEmail)
